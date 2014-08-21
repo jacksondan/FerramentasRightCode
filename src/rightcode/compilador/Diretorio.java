@@ -52,15 +52,16 @@ public class Diretorio {
 		
 			for(String nomeDir: dir){
 				File fileDir = new File(caminho+"/"+nomeDir);
-			
+				
 				if (fileDir.isDirectory())
 					setDir(caminho+"/"+nomeDir);
 			}
+			System.out.println(dir.toString());
 		}
 		
 		
 		//System.out.println(dir.size());
-		System.out.println(dir.toString());
+		//System.out.println(dir.toString());
 	}
 	
 	public String buscaMain(String caminhoSrc) throws IOException{
