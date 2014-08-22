@@ -17,7 +17,7 @@ import javax.tools.ToolProvider;
 public class Diretorio {
 	public static void main(String[] args){
 		
-		String caminho = "C:/Jackson/Copy/Compartilhamento Faculdade/ArquivosTeste RightCode/workspaceteste";
+		String caminho = "C:/Users/Jackson/Copy/Compartilhamento Faculdade/ArquivosTeste RightCode/workspaceteste";
 		
 		Diretorio teste = new Diretorio();
 		
@@ -38,7 +38,7 @@ public class Diretorio {
 		ArrayList <String> dir = new ArrayList<String>();
 		dir.addAll(Arrays.asList(diretorio.list()));
 		
-		if(dir.contains(".project")){
+		if(dir.contains("src")){
 			String caminhoBin = caminho+"/bin";
 			String caminhoArquivo = buscaMain(caminho+"/src");
 			
@@ -78,7 +78,7 @@ public class Diretorio {
 			if(file.isDirectory()){
 				retorno = buscaMain(caminhoSrc+"/"+conteudo);
 			}else if(conteudo.endsWith(".java")){
-				String pesMain = "^.*public static void main.String...*"; //[{|*{|\n{]*$ (String[] args)   public static void.*.String..
+				String pesMain = "^.*public static void main.String...*";
 				String arquivoCompleto = "";
 				String linha;
 				Charset utf8 = StandardCharsets.UTF_8;
